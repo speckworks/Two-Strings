@@ -1,22 +1,21 @@
 const twoStrings = (s1, s2)=>{
-  let shortStr;
-  let longStr;
-  
-  if(s1.length < s2.length){
-    shortStr = s1;
-    longStr = s2;
-  }else{
-    shortStr = s2;
-    longStr = s1;
-  }
-  
-  for(let i = 0; i < shortStr.length; i++){
-    if(longStr.indexOf(shortStr[i]) !== -1){
-      return "YES"
-    }
-  }
-  
-  return "NO"
-}
+    let longString, shortString;
 
+    if(s1.length > s2.length){
+      longString = s1;
+      shortString = s2;
+    }else{
+      if(s2 > s1){
+        longString = s2;
+        shortString = s1;
+      }
+    }
+
+  if(longString.indexOf(shortString) !== -1){
+    return "YES!"
+  } else {
+    return "no"
+  }
+
+}
 twoStrings('onesy', 'one');
